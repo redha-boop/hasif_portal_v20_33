@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>منصة حصيف — v20.2</title>
+<title>منصة حصيف — v20.4</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="./assets/style.css">
@@ -35,12 +35,12 @@
       <img src="./assets/hasseef-logo.svg" width="48" height="48" class="rounded" alt="حصيف">
       <div>
         <h1 class="text-2xl md:text-3xl font-extrabold">منصة وطنية للتكامل التنموي</h1>
-        <p class="text-slate-600">تجميع الاحتياج والحلول والتمويل والتنفيذ والقياس في مكان واحد — لكل القطاعات.</p>
+        <p class="text-slate-600">تجميع الاحتياج والحلول والتمويل والتنفيذ والقياس في مكان واحد — للجهات الحكومية والإمارات والقطاع الخاص وغير الربحي والجامعات والمانحين والأفراد.</p>
       </div>
     </div>
     <div class="flex flex-wrap gap-3 mt-3">
       <a href="./accounts/gov.html" class="btn btn-primary"><i data-lucide="play"></i> ابدأ الآن</a>
-      <a href="#services" class="btn"><i data-lucide="app-window"></i> تعرف على الخدمات</a>
+      <a href="#services" class="btn"><i data-lucide="app-window"></i> استعراض الخدمات</a>
       <button class="btn" onclick="toggleNotify(true)"><i data-lucide="bell"></i> التنبيهات</button>
     </div>
   </section>
@@ -48,27 +48,27 @@
   <section id="beneficiaries" class="mt-4 card">
     <div class="section-title"><i data-lucide="users"></i> المستفيدون</div>
     <div class="grid4 mt-2">
-      <a class="card" href="./accounts/gov.html"><i data-lucide="building-2"></i> <b>الجهات الحكومية</b></a>
-      <a class="card" href="./accounts/emirate.html"><i data-lucide="shield-check"></i> <b>الإمارات</b></a>
-      <a class="card" href="./accounts/private.html"><i data-lucide="building"></i> <b>القطاع الخاص</b></a>
-      <a class="card" href="./accounts/nonprofit.html"><i data-lucide="heart-handshake"></i> <b>غير الربحي</b></a>
-      <a class="card" href="./accounts/university.html"><i data-lucide="graduation-cap"></i> <b>الجامعات</b></a>
-      <a class="card" href="./accounts/individual.html"><i data-lucide="user"></i> <b>الأفراد</b></a>
-      <a class="card" href="./accounts/donor.html"><i data-lucide="hand-coins"></i> <b>المانحون</b></a>
-      <a class="card" href="./accounts/partners.html"><i data-lucide="handshake"></i> <b>الشركاء الاستراتيجيون</b></a>
+      <a class="card" href="./accounts/gov.html"><i data-lucide="building-2"></i> <b>الجهات الحكومية</b><div class="text-xs text-slate-500 mt-1">إدارة البرامج ومؤشرات الأداء</div></a>
+      <a class="card" href="./accounts/emirate.html"><i data-lucide="shield-check"></i> <b>الإمارات</b><div class="text-xs text-slate-500 mt-1">رعاية الأمير + المسح الأمني للمتحدثين</div></a>
+      <a class="card" href="./accounts/private.html"><i data-lucide="factory"></i> <b>القطاع الخاص</b><div class="text-xs text-slate-500 mt-1">CSR والحلول والوظائف</div></a>
+      <a class="card" href="./accounts/nonprofit.html"><i data-lucide="heart-handshake"></i> <b>غير الربحي</b><div class="text-xs text-slate-500 mt-1">حملات، تطوع، تمويل</div></a>
+      <a class="card" href="./accounts/university.html"><i data-lucide="graduation-cap"></i> <b>الجامعات</b><div class="text-xs text-slate-500 mt-1">تدريب تعاوني، مرافق، حاضنات</div></a>
+      <a class="card" href="./accounts/individual.html"><i data-lucide="user"></i> <b>الأفراد</b><div class="text-xs text-slate-500 mt-1">وظائف وتطوع واستشارات</div></a>
+      <a class="card" href="./accounts/donor.html"><i data-lucide="hand-coins"></i> <b>المانحون</b><div class="text-xs text-slate-500 mt-1">برامج منح ومحافظ</div></a>
+      <a class="card" href="./accounts/partners.html"><i data-lucide="handshake"></i> <b>الشركاء الاستراتيجيون</b><div class="text-xs text-slate-500 mt-1">لوحة مواءمة الشريك</div></a>
     </div>
   </section>
 
   <section id="services" class="mt-4 card">
-    <div class="section-title"><i data-lucide="app-window"></i> الخدمات</div>
-    <ul class="list-disc pr-6 text-slate-700">
-      <li>إدارة المشاريع والبرامج التنموية</li>
-      <li>سوق الحلول وربط الجهات بالمزوّدين</li>
-      <li>بوابة الرعايات (تكامل CSR) وطلب رعاية الأمير</li>
-      <li>المرافق والفعاليات والمسح الأمني للمتحدثين</li>
-      <li>التطوع والتوظيف والتدريب</li>
-      <li>الاستشارات والمطابقة الذكية</li>
-      <li>لوحات الأثر ومؤشرات الأداء الوطنية</li>
+    <div class="section-title"><i data-lucide="app-window"></i> الخدمات الرئيسية</div>
+    <ul class="list-disc pr-6 text-slate-700 leading-7">
+      <li>إدارة المشاريع والبرامج التنموية (مؤشرات، مراحل، محفظة تمويل).</li>
+      <li>سوق الحلول وربط الجهات بالمزوّدين (عقود، عروض، مفاضلة).</li>
+      <li>بوابة الرعايات الوطنية (CSR) و**طلب رعاية الأمير** من القطاعات واعتماد الإمارة.</li>
+      <li>المرافق والفعاليات + **المسح الأمني للمتحدثين** (للأشخاص لا الأماكن) + إدارة المتحدثين والمدربين.</li>
+      <li>التطوع والتوظيف والتدريب التعاوني (في جميع الحسابات عدا الشركاء الاستراتيجيين).</li>
+      <li>الاستشارات والمطابقة الذكية (مستشار ذكي + إرفاق وثائق).</li>
+      <li>لوحات الأثر ومؤشرات الأداء الوطنية وتقارير مخصّصة للشركاء.</li>
     </ul>
   </section>
 
@@ -84,22 +84,25 @@
 
   <section id="about" class="mt-4 card">
     <div class="section-title"><i data-lucide="info"></i> عن المنصة</div>
-    <p class="text-slate-700">منصة وطنية تربط الاحتياجات بالمبادرات والتمويل والتنفيذ والقياس باستخدام البيانات والذكاء الاصطناعي.</p>
+    <p class="text-slate-700">
+      منصة حصيف بوابة وطنية لتمكين التكامل بين القطاع العام والخاص وغير الربحي والجامعات والمانحين والأفراد.
+      تجمع المنصة دورة الحياة التنموية: احتياج → حل → تمويل → تنفيذ → قياس أثر، وتستخدم البيانات والذكاء الاصطناعي لرفع الكفاءة والحوكمة.
+    </p>
   </section>
 
   <section id="support" class="mt-4 card">
     <div class="section-title"><i data-lucide="life-buoy"></i> الدعم الفني</div>
-    <p class="text-slate-700">تواصل: support@hasseef.local (نسخة عرض)</p>
+    <p class="text-slate-700">تواصل: support@hasseef.example — هذا بريد تجريبي في النسخة الأولية.</p>
   </section>
 
   <section id="privacy" class="mt-4 card">
-    <div class="section-title"><i data-lucide="lock"></i> الخصوصية</div>
-    <p class="text-slate-700">مسودة قابلة للاستبدال بالمحتوى المعتمد.</p>
+    <div class="section-title"><i data-lucide="lock"></i> سياسة الخصوصية</div>
+    <p class="text-slate-700">تلتزم المنصة بحماية خصوصية المستخدمين وفق الأنظمة ذات العلاقة. هذه مسودة قابلة للاستبدال بنصكم الرسمي لاحقًا.</p>
   </section>
 
   <section id="terms" class="mt-4 card">
     <div class="section-title"><i data-lucide="scroll-text"></i> اتفاقية الاستخدام</div>
-    <p class="text-slate-700">مسودة قابلة للاستبدال بالمحتوى المعتمد.</p>
+    <p class="text-slate-700">استخدام المنصة يعني الموافقة على الشروط والأحكام وسياسات المعالجة والحوكمة. هذه مسودة قابلة للتحديث.</p>
   </section>
 </main>
 
