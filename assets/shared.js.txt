@@ -1,4 +1,4 @@
-// ====== بيانات تجريبية بسيطة ======
+// ====== بيانات تجريبية مبسّطة ======
 const DEMO = {
   projects:[
     {id:1,name:'سقيا الماء',owner:'جمعية البر',start:'2026-01-01',end:'2026-06-30',progress:65,budget:300000,spent:280000,status:'جارٍ',region:'الرياض'},
@@ -49,7 +49,7 @@ function buildSidebar(activeRoute){
     <nav class="space-y-1" id="accountsNav">
       <a class="sidebar-item" href="${rel}/accounts/gov.html" data-route="gov"><i data-lucide="building-2"></i> الحكومة</a>
       <a class="sidebar-item" href="${rel}/accounts/emirate.html" data-route="emirate"><i data-lucide="shield-check"></i> الإمارة</a>
-      <a class="sidebar-item" href="${rel}/accounts/private.html" data-route="private"><i data-lucide="building"></i> القطاع الخاص</a>
+      <a class="sidebar-item" href="${rel}/accounts/private.html" data-route="private"><i data-lucide="factory"></i> القطاع الخاص</a>
       <a class="sidebar-item" href="${rel}/accounts/nonprofit.html" data-route="nonprofit"><i data-lucide="heart-handshake"></i> غير الربحي</a>
       <a class="sidebar-item" href="${rel}/accounts/university.html" data-route="university"><i data-lucide="graduation-cap"></i> الجامعات</a>
       <a class="sidebar-item" href="${rel}/accounts/individual.html" data-route="individual"><i data-lucide="user"></i> الأفراد</a>
@@ -68,7 +68,7 @@ function buildSidebar(activeRoute){
       <a class="sidebar-item" href="${rel}/index.html#terms"><i data-lucide="scroll-text"></i> الاتفاقية</a>
     </nav>
 
-    <div class="text-xs text-slate-400 mt-6">© حصيف — v20.2</div>
+    <div class="text-xs text-slate-400 mt-6">© حصيف — v20.4</div>
   `;
   $$('#accountsNav a', sidebar).forEach(a=>{
     a.classList.toggle('active', a.dataset.route===activeRoute);
@@ -315,13 +315,13 @@ function panelTrainers(){
 const ACCOUNT_TABS = {
   gov:{ title:'حساب الحكومة', tabs:{
       '📊 المشاريع': panelProjects(),
-      '🧩 الحلول': panelSolutions(),
+      '🧩 سوق الحلول': panelSolutions(),
       '🎯 فرص الرعاية (طلب الأمير)': panelPrinceRequest(),
       '🏟️ المرافق والفعاليات': panelFacilities(),
       '💡 الاستشارات': panelConsultations(),
       '💰 المحفظة': panelWallet('محفظة حكومية'),
       '🤖 الذكاء الاصطناعي': panelAI(),
-      '📈 التقارير': `<div class='card'><div class='section-title'><i data-lucide="chart-column"></i> التقارير</div><button class='btn' onclick="exportCSV('projectsTable')"><i data-lucide="table"></i> تصدير CSV</button></div>`
+      '📈 المؤشرات والتقارير': `<div class='card'><div class='section-title'><i data-lucide="chart-column"></i> المؤشرات والتقارير</div><button class='btn' onclick="exportCSV('projectsTable')"><i data-lucide="table"></i> تصدير CSV</button></div>`
   }},
   emirate:{ title:'حساب الإمارة', tabs:{
       '🎯 مراجعة رعاية الأمير': panelEmirateApproval(),
@@ -329,10 +329,10 @@ const ACCOUNT_TABS = {
       '📊 المشاريع': panelProjects(),
       '💰 المحفظة': panelWallet('محفظة الإمارة'),
       '🤖 الذكاء الاصطناعي': panelAI(),
-      '📈 التقارير': `<div class='card'><div class='section-title'><i data-lucide="chart-column"></i> التقارير</div><button class='btn' onclick="exportCSV('projectsTable')">تصدير CSV</button></div>`
+      '📈 المؤشرات والتقارير': `<div class='card'><div class='section-title'><i data-lucide="chart-column"></i> المؤشرات والتقارير</div><button class='btn' onclick="exportCSV('projectsTable')">تصدير CSV</button></div>`
   }},
   private:{ title:'حساب القطاع الخاص', tabs:{
-      '🧩 الحلول': panelSolutions(),
+      '🧩 سوق الحلول': panelSolutions(),
       '🤝 فرص CSR الوطنية': panelPrinceRequest(),
       '🏟️ المرافق والفعاليات': panelFacilities(),
       '💡 الاستشارات': panelConsultations(),
@@ -340,32 +340,32 @@ const ACCOUNT_TABS = {
       '🧑‍💼 الوظائف/التدريب/التطوع': panelJobs(),
       '🎤 المدربون والمتحدثون': panelTrainers(),
       '🤖 الذكاء الاصطناعي': panelAI(),
-      '📈 التقارير': `<div class='card'><div class='section-title'><i data-lucide="chart-column"></i> التقارير</div><button class='btn' onclick="exportCSV('projectsTable')">تصدير CSV</button></div>`
+      '📈 المؤشرات والتقارير': `<div class='card'><div class='section-title'><i data-lucide="chart-column"></i> المؤشرات والتقارير</div><button class='btn' onclick="exportCSV('projectsTable')">تصدير CSV</button></div>`
   }},
   nonprofit:{ title:'حساب القطاع غير الربحي', tabs:{
       '📊 المشاريع/الحملات': panelProjects(),
-      '🧩 الحلول': panelSolutions(),
+      '🧩 سوق الحلول': panelSolutions(),
       '🎯 فرص الرعاية (طلب الأمير)': panelPrinceRequest(),
       '🤝 التطوع': panelJobs(),
       '💡 الاستشارات': panelConsultations(),
       '💰 المحفظة': panelWallet('محفظة الجمعيات'),
       '🤖 الذكاء الاصطناعي': panelAI(),
-      '📈 التقارير': `<div class='card'><div class='section-title'><i data-lucide="chart-column"></i> التقارير</div><button class='btn' onclick="exportCSV('projectsTable')">تصدير CSV</button></div>`
+      '📈 المؤشرات والتقارير': `<div class='card'><div class='section-title'><i data-lucide="chart-column"></i> المؤشرات والتقارير</div><button class='btn' onclick="exportCSV('projectsTable')">تصدير CSV</button></div>`
   }},
   university:{ title:'حساب الجامعات', tabs:{
       '🎓 التدريب التعاوني': panelJobs(),
-      '🧩 الحلول': panelSolutions(),
+      '🧩 سوق الحلول': panelSolutions(),
       '🏟️ المرافق والفعاليات': panelFacilities(),
       '🚀 الحاضنات/المسرعات': `<div class='card'><div class='section-title'><i data-lucide="rocket"></i> إدارة الحاضنات</div><p class='text-sm text-slate-600'>دفعات ومشاريع ناشئة (Pitch + مرفقات).</p><button class='btn' onclick='openFilePicker()'>+ إرفاق مستندات</button></div>`,
       '🎯 فرص الرعاية (طلب الأمير)': panelPrinceRequest(),
       '💳 المحفظة البحثية': panelWallet('محفظة البحوث'),
       '💡 الاستشارات': panelConsultations(),
       '🤖 الذكاء الاصطناعي': panelAI(),
-      '📈 التقارير': `<div class='card'><div class='section-title'><i data-lucide="chart-column"></i> التقارير</div><button class='btn' onclick="exportCSV('projectsTable')">تصدير CSV</button></div>`
+      '📈 المؤشرات والتقارير': `<div class='card'><div class='section-title'><i data-lucide="chart-column"></i> المؤشرات والتقارير</div><button class='btn' onclick="exportCSV('projectsTable')">تصدير CSV</button></div>`
   }},
   individual:{ title:'حساب الأفراد', tabs:{
       '🧑‍💼 الوظائف/التدريب/التطوع': panelJobs(),
-      '🎤 المتحدثون/المدربون (تقديم)': `<div class='card'><div class='section-title'><i data-lucide="mic-2"></i> التقديم كمتحدث/مدرب</div><button class='btn btn-accent' onclick='openFilePicker()'>تقديم</button></div>`,
+      '🎤 التقديم كمتحدث/مدرب': `<div class='card'><div class='section-title'><i data-lucide="mic-2"></i> التقديم كمتحدث/مدرب</div><button class='btn btn-accent' onclick='openFilePicker()'>تقديم</button></div>`,
       '💳 المحفظة الشخصية': panelWallet('محفظة شخصية'),
       '💡 الاستشارات': panelConsultations(),
       '🤖 الذكاء الاصطناعي': panelAI()
